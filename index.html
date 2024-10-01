@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Países</title>
+    <link rel="stylesheet" href="global.css">
+</head>
+<body>
+    <header>
+        <h1>Lista de Países</h1>
+    </header>
+    <main>
+        <div class="filters">
+            <label for="search">Pesquisar País:</label>
+            <input type="text" id="search" class="filter-input" placeholder="Digite o nome do país">
+
+            <label for="region">Região:</label>
+            <select id="region">
+                <option value="">Selecione uma Região</option>
+                <option value="Africa">África</option>
+                <option value="Asia">Ásia</option>
+                <option value="Europe">Europa</option>
+                <option value="Oceania">Oceania</option>
+                <option value="Americas">Américas</option>
+            </select>
+
+            <label for="subregion">Sub-região:</label>
+            <select id="subregion" disabled>
+                <option value="">Selecione uma Sub-região</option>
+            </select>
+
+            <label for="population">População:</label>
+            <select id="population">
+                <option value="">Selecione um intervalo</option>
+                <option value="lessThan1M">Menos de 1M</option>
+                <option value="1Mto10M">1M - 10M</option>
+                <option value="10Mto100M">10M - 100M</option>
+                <option value="moreThan100M">Mais de 100M</option>
+            </select>
+
+            <label for="sortBy">Ordenar por:</label>
+            <select id="sortBy">
+                <option value="nameAsc">Nome (A-Z)</option>
+                <option value="nameDesc">Nome (Z-A)</option>
+                <option value="populationAsc">População (Crescente)</option>
+                <option value="populationDesc">População (Decrescente)</option>
+                <option value="areaAsc">Área (Crescente)</option>
+                <option value="areaDesc">Área (Decrescente)</option>
+            </select>
+        </div>
+
+        <div id="countries" class="countries-grid scrollbar"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
